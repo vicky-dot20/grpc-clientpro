@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package enrichmentPackage;
+
+service EnrichmentService {
+  rpc Enrich(EmptyRequest) returns (EnrichmentResponse);
+}
+
+message EmptyRequest {
+}
+
+message EnrichmentResponse {
+  string token = 1;
+}
